@@ -10,8 +10,13 @@ public class GeneradorIdUnico {
         System.out.print("Cual es tu apellido: ");
         var apellido = consola.nextLine();
         System.out.print("Cual es tu año de nacimiento:");
-        var añoNacimiento= Integer.parseInt(consola.nextLine());
+        var añoNacimiento= consola.nextLine();
         var random = new Random();
+        var numeroAleatorio=random.nextInt(9999);
+
+        var numeroId=nombre.substring(0,2).toUpperCase()+apellido.substring(0,2).toUpperCase()+añoNacimiento.substring(2,4)+numeroAleatorio;
+        System.out.printf("Hola %s \n\tTu nuevo numero de identificacion(ID) generado por el sistema es:\n\t %s",nombre,numeroId);
+
 
 
     }
